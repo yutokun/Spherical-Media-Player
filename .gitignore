@@ -1,0 +1,53 @@
+# Ignore
+Temp/
+Obj/
+UnityGenerated/
+Library/
+ExportedObj/
+Logs/
+.vs/
+.vscode/
+.idea/
+Assets/Plugins/Editor/JetBrains*
+*.vsconfig
+*.svd
+*.userprefs
+*.csproj
+*.csproj.meta
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*Enhanced Hierarchy*
+*Borodar*
+*.DotSettings
+*.apk
+*.mp4
+Build/
+/Settings
+/UserLocalSettings
+/UserSettings
+/MonoBleedingEdge
+*.log
+*.log #log files, for some plugins
+*.pyc #python bytecode cache, for some plugins.
+sysinfo.txt #Unity3D Generated File On Crash Reports
+uDesktopDuplication.log
+uTouchInjection.log
+Builds/
+*Ludiq*
+/DownloadFileName
+hauth.conf
+*.blend1*
+
+# Keep
+!Assets/**/*.csproj
