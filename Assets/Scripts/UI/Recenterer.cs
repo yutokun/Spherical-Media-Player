@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,20 @@ namespace yutokun.SphericalMediaPlayer
 
         void Awake()
         {
-            recenterButton.onClick.AddListener(() => camera.rotation = Quaternion.identity);
+            recenterButton.onClick.AddListener(() => StartCoroutine(Recenter()));
+        }
+
+        IEnumerator Recenter()
+        {
+            var startRotation = camera.rotation;
+            var loopCount = 0;
+
+            while (camera.rotation != Quaternion.identity)
+            {
+                ++loopCount;
+                camera.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, 1f / 60f * loopCount);
+                yield return null;
+            }
         }
     }
 }
