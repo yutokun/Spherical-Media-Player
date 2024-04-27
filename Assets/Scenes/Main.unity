@@ -594,7 +594,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragger: {fileID: 1361532855}
   camera: {fileID: 939039609}
+  sensitivity: 0.1
 --- !u!1 &1435719432
 GameObject:
   m_ObjectHideFlags: 0
