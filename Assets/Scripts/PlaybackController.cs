@@ -2,35 +2,37 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class PlaybackController : MonoBehaviour
+namespace yutokun.SphericalMediaPlayer
 {
-    [SerializeField]
-    FileOpener fileOpener;
-
-    [SerializeField]
-    VideoPlayer videoPlayer;
-
-    [SerializeField]
-    Material videoMaterial;
-
-    [SerializeField]
-    RenderTexture videoTexture;
-
-    Texture blackTexture;
-    static readonly int MainTex = Shader.PropertyToID("_MainTex");
-
-    void Awake()
+    public class PlaybackController : MonoBehaviour
     {
-        blackTexture = videoMaterial.GetTexture(MainTex);
-        fileOpener.OnOpen += OnOpen;
-    }
+        [SerializeField]
+        FileOpener fileOpener;
 
-    void OnOpen(string path)
+        [SerializeField]
+        VideoPlayer videoPlayer;
+
+        [SerializeField]
+        Material videoMaterial;
+
+        [SerializeField]
+        RenderTexture videoTexture;
+
+        Texture blackTexture;
+        static readonly int MainTex = Shader.PropertyToID("_MainTex");
+
+        void Awake()
+        {
+            blackTexture = videoMaterial.GetTexture(MainTex);
+            fileOpener.OnOpen += OnOpen;
+        }
+
+        void OnOpen(string path)
         {
             UniTask.Void(async () =>
-    {
-        videoPlayer.Stop();
-        videoPlayer.url = path;
+            {
+                videoPlayer.Stop();
+                videoPlayer.url = path;
                 videoPlayer.Prepare();
                 await UniTask.WaitUntil(() => videoPlayer.isPrepared);
 
@@ -38,14 +40,15 @@ public class PlaybackController : MonoBehaviour
                 videoTexture.width = (int)videoPlayer.width;
                 videoTexture.height = (int)videoPlayer.height;
                 videoTexture.Create();
-        videoMaterial.SetTexture(MainTex, videoTexture);
+                videoMaterial.SetTexture(MainTex, videoTexture);
 
-        videoPlayer.Play();
+                videoPlayer.Play();
             });
-    }
+        }
 
-    void OnApplicationQuit()
-    {
-        videoMaterial.SetTexture(MainTex, blackTexture);
+        void OnApplicationQuit()
+        {
+            videoMaterial.SetTexture(MainTex, blackTexture);
+        }
     }
 }

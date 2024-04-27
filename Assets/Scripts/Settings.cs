@@ -1,6 +1,9 @@
 using System;
 
-public static class Settings
+namespace yutokun.SphericalMediaPlayer
 {
-    public static Setting<string> LastPath { get; } = new("LastPath", Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+    public static class Settings
+    {
+        public static Setting<string> LastPath { get; } = new("LastPath", Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+    }
 }
