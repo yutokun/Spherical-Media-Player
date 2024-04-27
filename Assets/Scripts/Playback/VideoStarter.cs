@@ -4,7 +4,7 @@ using UnityEngine.Video;
 
 namespace yutokun.SphericalMediaPlayer
 {
-    public class PlaybackController : MonoBehaviour
+    public class VideoStarter : MonoBehaviour
     {
         [SerializeField]
         FileOpener fileOpener;
