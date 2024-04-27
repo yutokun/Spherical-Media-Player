@@ -1,6 +1,8 @@
 # Spherical Media Player
 
-Spherical Video / Photo Player for macOS.
+Spherical Video / Photo Player for macOS.  
+VLC and GoPro Player support spherical media, but they rely on specific metadata. This program can play these media as
+spherical without needing it.
 
 Made with Unity.
 
@@ -10,6 +12,17 @@ Made with Unity.
 - [x] 180 Mono/Stereoscopic Video Playback
 - [ ] 360 Mono/Stereoscopic Photo Viewing
 - [ ] 180 Mono/Stereoscopic Photo Viewing
+- [x] Recentering
+- [ ] Info Overlay
+- [x] QuickTime Style UI
+- [ ] Keyboard Controls
+    - [x] Space - Play/Pause
+
+## Not Planned
+
+- VR Headset Support
+- Windows Release (Because Movies & TV app has 360 video support)
+- Detailed Video Info
 
 ## License
 
