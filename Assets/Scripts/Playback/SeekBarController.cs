@@ -16,6 +16,9 @@ namespace yutokun.SphericalMediaPlayer
         CurrentTimeIndicator indicator;
 
         [SerializeField]
+        TimeTextUI timeTextUI;
+
+        [SerializeField]
         VideoPlayer videoPlayer;
 
         bool Seeking { get; set; }
@@ -34,6 +37,7 @@ namespace yutokun.SphericalMediaPlayer
         IEnumerator Seek()
         {
             indicator.StopUpdateUntilSeekingFinished();
+            timeTextUI.StopUpdateUntilSeekingFinished();
 
             var center = transform.position.x;
             var width = seekBar.rectTransform.rect.width * (Screen.dpi / 72f); // dpi の違いを補正
@@ -45,6 +49,7 @@ namespace yutokun.SphericalMediaPlayer
             {
                 normalizedTime = Mathf.Clamp01((Input.mousePosition.x - leftMargin) / width);
                 indicator.SetPosition(normalizedTime);
+                timeTextUI.SetNormalizedTime(normalizedTime);
                 yield return null;
             }
 

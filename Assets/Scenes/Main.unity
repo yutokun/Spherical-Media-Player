@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seekBar: {fileID: 102375293}
   indicator: {fileID: 1293495677}
+  timeTextUI: {fileID: 891205842}
   videoPlayer: {fileID: 1172131661}
 --- !u!1 &284090656
 GameObject:
