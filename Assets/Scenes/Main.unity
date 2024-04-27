@@ -1670,6 +1670,7 @@ GameObject:
   - component: {fileID: 1920947216}
   - component: {fileID: 1920947215}
   - component: {fileID: 1920947214}
+  - component: {fileID: 1920947217}
   m_Layer: 5
   m_Name: RecenterButton (Legacy)
   m_TagString: Untagged
@@ -1779,6 +1780,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920947212}
   m_CullTransparentMesh: 1
+--- !u!114 &1920947217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920947212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a53e2bd2b344fd1a71cd32ac98f12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recenterButton: {fileID: 1920947214}
+  camera: {fileID: 939039609}
 --- !u!1 &2063449629
 GameObject:
   m_ObjectHideFlags: 0
