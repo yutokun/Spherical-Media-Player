@@ -6,8 +6,8 @@ Made with Unity.
 
 ## Features / Roadmap
 
-- [ ] 360 Mono/Stereoscopic Video Playback
-- [ ] 180 Mono/Stereoscopic Video Recording
+- [x] 360 Mono/Stereoscopic Video Playback
+- [x] 180 Mono/Stereoscopic Video Playback
 - [ ] 360 Mono/Stereoscopic Photo Viewing
 - [ ] 180 Mono/Stereoscopic Photo Viewing
 
