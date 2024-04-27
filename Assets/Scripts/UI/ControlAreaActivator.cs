@@ -15,11 +15,16 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         Image background;
 
+        [SerializeField]
+        Animator animator;
+
         Vector3 prevMousePosition;
         float mouseStopTime;
 
         float mouseStopTimeAfterClick;
         bool mouseWasClicked;
+
+        static readonly int Hidden = Animator.StringToHash("Hidden");
 
         static bool MouseIsInWindow => Input.mousePosition.x >= 0 && Input.mousePosition.x <= Screen.width &&
                                        Input.mousePosition.y >= 0 && Input.mousePosition.y <= Screen.height;
@@ -83,7 +88,7 @@ namespace yutokun.SphericalMediaPlayer
 
         void Show()
         {
-            canvas.alpha = 1f;
+            animator.SetBool(Hidden, false);
             canvas.interactable = true;
             canvas.blocksRaycasts = true;
 
@@ -92,7 +97,7 @@ namespace yutokun.SphericalMediaPlayer
 
         void Hide()
         {
-            canvas.alpha = 0f;
+            animator.SetBool(Hidden, true);
             canvas.interactable = false;
             canvas.blocksRaycasts = false;
 
