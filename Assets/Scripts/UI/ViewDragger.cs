@@ -49,17 +49,17 @@ namespace yutokun.SphericalMediaPlayer
                 var cameraUpFacingUpwards = Vector3.Dot(rotation * Vector3.up, Vector3.up) > 0f;
                 if (cameraUpFacingUpwards)
                 {
-                    var euler = rotation.eulerAngles;
-                    euler.z = 0f;
-                    camera.rotation = Quaternion.Euler(euler);
+                    camera.rotation = rotation;
                 }
                 else
                 {
                     var yOnlyRotation = initialRotation * rotationY;
-                    var euler = yOnlyRotation.eulerAngles;
-                    euler.z = 0f;
-                    camera.rotation = Quaternion.Euler(euler);
+                    camera.rotation = yOnlyRotation;
                 }
+
+                var euler = camera.eulerAngles;
+                euler.z = 0f;
+                camera.eulerAngles = euler;
 
                 yield return null;
             }
