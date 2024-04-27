@@ -1,5 +1,5 @@
-using System;
 using System.IO;
+using R3;
 using SFB;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +11,8 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         Button openButton;
 
-        public event Action<string> OnOpen;
+        public Observable<string> OnOpenedAsObservable => onOpened.AsObservable();
+        readonly Subject<string> onOpened = new();
 
         readonly ExtensionFilter[] extensionsFilter =
         {
@@ -34,7 +35,7 @@ namespace yutokun.SphericalMediaPlayer
             Debug.Log($"開いたファイル: {path}");
             Settings.LastPath.Value = Path.GetDirectoryName(path);
 
-            OnOpen?.Invoke(path);
+            onOpened.OnNext(path);
         }
     }
 }

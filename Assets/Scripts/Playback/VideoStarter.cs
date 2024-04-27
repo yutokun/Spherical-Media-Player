@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using R3;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -24,7 +25,9 @@ namespace yutokun.SphericalMediaPlayer
         void Awake()
         {
             blackTexture = videoMaterial.GetTexture(MainTex);
-            fileOpener.OnOpen += OnOpen;
+            fileOpener.OnOpenedAsObservable
+                      .Subscribe(OnOpen)
+                      .AddTo(this);
         }
 
         void OnOpen(string path)
