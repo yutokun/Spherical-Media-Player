@@ -55,6 +55,8 @@ namespace yutokun.SphericalMediaPlayer
             canvas.alpha = 1f;
             canvas.interactable = true;
             canvas.blocksRaycasts = true;
+
+            Cursor.visible = true;
         }
 
         void Hide()
@@ -62,6 +64,8 @@ namespace yutokun.SphericalMediaPlayer
             canvas.alpha = 0f;
             canvas.interactable = false;
             canvas.blocksRaycasts = false;
+
+            Cursor.visible = false;
         }
     }
 }
