@@ -20,6 +20,7 @@ public class FileOpener : MonoBehaviour
     void Start()
     {
         openButton.onClick.AddListener(ShowOpenDialog);
+            ShowOpenDialog();
     }
 
     void ShowOpenDialog()
