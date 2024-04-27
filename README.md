@@ -22,3 +22,8 @@ Copyright (c) 2017 Gökhan Gökçe
 
 The MIT License (MIT)  
 Copyright (c) 2019 Yoshifumi Kawai / Cysharp, Inc.
+
+### [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity)
+
+MIT License  
+Copyright (c) 2018 Patrick McCarthy

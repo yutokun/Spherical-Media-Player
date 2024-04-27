@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "2e225fb8414e023df2aa3acae2ef225471981316"
     },
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "4.1.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
