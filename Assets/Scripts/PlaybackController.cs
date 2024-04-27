@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -25,11 +26,22 @@ public class PlaybackController : MonoBehaviour
     }
 
     void OnOpen(string path)
+        {
+            UniTask.Void(async () =>
     {
         videoPlayer.Stop();
         videoPlayer.url = path;
+                videoPlayer.Prepare();
+                await UniTask.WaitUntil(() => videoPlayer.isPrepared);
+
+                videoTexture.Release();
+                videoTexture.width = (int)videoPlayer.width;
+                videoTexture.height = (int)videoPlayer.height;
+                videoTexture.Create();
         videoMaterial.SetTexture(MainTex, videoTexture);
+
         videoPlayer.Play();
+            });
     }
 
     void OnApplicationQuit()
