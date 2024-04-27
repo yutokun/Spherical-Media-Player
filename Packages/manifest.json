@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.ai": "1.0.0",

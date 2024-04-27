@@ -17,3 +17,8 @@ Made with Unity.
 
 MIT License  
 Copyright (c) 2017 Gökhan Gökçe
+
+### [UniTask](https://github.com/Cysharp/UniTask)
+
+The MIT License (MIT)  
+Copyright (c) 2019 Yoshifumi Kawai / Cysharp, Inc.
