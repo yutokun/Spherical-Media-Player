@@ -27,3 +27,8 @@ Copyright (c) 2019 Yoshifumi Kawai / Cysharp, Inc.
 
 MIT License  
 Copyright (c) 2018 Patrick McCarthy
+
+### [R3](https://github.com/Cysharp/R3)
+
+MIT License  
+Copyright (c) 2024 Cysharp, Inc.
