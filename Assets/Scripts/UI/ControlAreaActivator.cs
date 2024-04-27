@@ -8,19 +8,33 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         CanvasGroup canvas;
 
-        // TODO マウスでクリックされたら非表示にする。ドラッグは除外。
-
         Vector3 prevMousePosition;
         float mouseStopTime;
 
+        float mouseStopTimeAfterClick;
+        bool mouseWasClicked;
+
+        static bool MouseIsInWindow => Input.mousePosition.x >= 0 && Input.mousePosition.x <= Screen.width &&
+                                       Input.mousePosition.y >= 0 && Input.mousePosition.y <= Screen.height;
+
         void Update()
         {
-            var mouseWasClickedInThisFrame = Input.GetMouseButtonDown(0);
+            BuildConditions();
+            ApplyActiveness();
+        }
 
-            var mouseIsInWindow = Input.mousePosition.x >= 0 && Input.mousePosition.x <= Screen.width &&
-                                  Input.mousePosition.y >= 0 && Input.mousePosition.y <= Screen.height;
+        void BuildConditions()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseWasClicked = true;
+            }
+            else
+            {
+                mouseWasClicked = false;
+            }
 
-            if (mouseIsInWindow)
+            if (MouseIsInWindow)
             {
                 if (prevMousePosition != Input.mousePosition)
                 {
@@ -33,18 +47,22 @@ namespace yutokun.SphericalMediaPlayer
             }
 
             prevMousePosition = Input.mousePosition;
+        }
 
+
+        void ApplyActiveness()
+        {
             var mouseIsMoving = mouseStopTime == 0f;
             if (mouseIsMoving)
             {
                 Show();
             }
-            else if (mouseWasClickedInThisFrame || mouseStopTime > 3f)
+            else if (mouseWasClicked || mouseStopTime > 3f)
             {
                 Hide();
             }
 
-            if (!mouseIsInWindow)
+            if (!MouseIsInWindow)
             {
                 Hide();
             }
