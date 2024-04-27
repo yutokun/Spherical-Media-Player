@@ -2,6 +2,8 @@
 
 Spherical Video / Photo Player for macOS.
 
+Made with Unity.
+
 ## Features / Roadmap
 
 - [ ] 360 Mono/Stereoscopic Video Playback
