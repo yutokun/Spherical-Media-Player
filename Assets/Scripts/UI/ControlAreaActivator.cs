@@ -1,5 +1,8 @@
 using System.Collections;
+using R3;
+using R3.Triggers;
 using UnityEngine;
+using UnityEngine.UI;
 using Screen = UnityEngine.Screen;
 
 namespace yutokun.SphericalMediaPlayer
@@ -8,6 +11,9 @@ namespace yutokun.SphericalMediaPlayer
     {
         [SerializeField]
         CanvasGroup canvas;
+
+        [SerializeField]
+        Image background;
 
         Vector3 prevMousePosition;
         float mouseStopTime;
@@ -18,6 +24,22 @@ namespace yutokun.SphericalMediaPlayer
         static bool MouseIsInWindow => Input.mousePosition.x >= 0 && Input.mousePosition.x <= Screen.width &&
                                        Input.mousePosition.y >= 0 && Input.mousePosition.y <= Screen.height;
 
+        void Awake()
+        {
+            background.OnPointerClickAsObservable()
+                      .Subscribe(_ => StartCoroutine(DetectClick()))
+                      .AddTo(this);
+        }
+
+        IEnumerator DetectClick()
+        {
+            var mousePositionOnButtonDown = Input.mousePosition;
+            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+            mouseWasClicked = mousePositionOnButtonDown == Input.mousePosition;
+            yield return null;
+            mouseWasClicked = false;
+        }
+
         void Update()
         {
             BuildConditions();
@@ -26,11 +48,6 @@ namespace yutokun.SphericalMediaPlayer
 
         void BuildConditions()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartCoroutine(DetectClick());
-            }
-
             if (MouseIsInWindow)
             {
                 if (prevMousePosition != Input.mousePosition)
@@ -62,15 +79,6 @@ namespace yutokun.SphericalMediaPlayer
             {
                 Hide();
             }
-        }
-
-        IEnumerator DetectClick()
-        {
-            var mousePositionOnButtonDown = Input.mousePosition;
-            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-            mouseWasClicked = mousePositionOnButtonDown == Input.mousePosition;
-            yield return null;
-            mouseWasClicked = false;
         }
 
         void Show()
