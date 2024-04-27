@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Screen = UnityEngine.Screen;
 
@@ -27,11 +28,7 @@ namespace yutokun.SphericalMediaPlayer
         {
             if (Input.GetMouseButtonDown(0))
             {
-                mouseWasClicked = true;
-            }
-            else
-            {
-                mouseWasClicked = false;
+                StartCoroutine(DetectClick());
             }
 
             if (MouseIsInWindow)
@@ -49,7 +46,6 @@ namespace yutokun.SphericalMediaPlayer
             prevMousePosition = Input.mousePosition;
         }
 
-
         void ApplyActiveness()
         {
             var mouseIsMoving = mouseStopTime == 0f;
@@ -66,6 +62,15 @@ namespace yutokun.SphericalMediaPlayer
             {
                 Hide();
             }
+        }
+
+        IEnumerator DetectClick()
+        {
+            var mousePositionOnButtonDown = Input.mousePosition;
+            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+            mouseWasClicked = mousePositionOnButtonDown == Input.mousePosition;
+            yield return null;
+            mouseWasClicked = false;
         }
 
         void Show()
