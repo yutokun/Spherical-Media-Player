@@ -1,0 +1,17 @@
+{
+    "name": "SphericalMediaPlayer",
+    "rootNamespace": "yutokun.SphericalMediaPlayer",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:499f132f9d7094a6892cd6b6e537f2c0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
