@@ -30,5 +30,7 @@ public class FileOpener : MonoBehaviour
 
         Debug.Log($"開いたファイル: {path}");
         Settings.LastPath.Value = Path.GetDirectoryName(path);
+
+        OnOpen?.Invoke(path);
     }
 }
