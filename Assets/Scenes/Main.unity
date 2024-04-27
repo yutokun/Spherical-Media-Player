@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 102375292}
   - component: {fileID: 102375294}
   - component: {fileID: 102375293}
+  - component: {fileID: 102375295}
   m_Layer: 5
   m_Name: SeekBar
   m_TagString: Untagged
@@ -175,7 +176,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: -2, z: 0, w: -2}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -198,6 +199,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102375291}
   m_CullTransparentMesh: 1
+--- !u!114 &102375295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102375291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e8166d5b2ac4a42afa92d21f319ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seekBar: {fileID: 102375293}
+  indicator: {fileID: 1293495677}
+  videoPlayer: {fileID: 1172131661}
 --- !u!1 &284090656
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
