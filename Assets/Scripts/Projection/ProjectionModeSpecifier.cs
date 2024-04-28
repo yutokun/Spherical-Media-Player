@@ -11,6 +11,9 @@ namespace yutokun.SphericalMediaPlayer
         Button button;
 
         [SerializeField]
+        RectTransform checkmark;
+
+        [SerializeField]
         ProjectionModeSwitcher switcher;
 
         [SerializeField]
@@ -19,7 +22,14 @@ namespace yutokun.SphericalMediaPlayer
         void Awake()
         {
             button.OnPointerClickAsObservable()
-                  .Subscribe(_ => switcher.SwitchTo(mode))
+                  .Subscribe(_ =>
+                  {
+                      switcher.SwitchTo(mode);
+
+                      var pos = checkmark.anchoredPosition;
+                      pos.y = GetComponent<RectTransform>().anchoredPosition.y;
+                      checkmark.anchoredPosition = pos;
+                  })
                   .AddTo(this);
         }
     }
