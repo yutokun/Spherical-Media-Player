@@ -3,8 +3,7 @@
 ![](./Docs/Screenshot.png)
 
 Spherical Video / Photo Player for macOS.  
-VLC and GoPro Player support spherical media, but they rely on specific metadata. This program can play these media as
-spherical without needing it.
+Other common players also support spherical media, but they rely on specific metadata. This program can play these media as spherical without needing it.
 
 Made with Unity.
 
