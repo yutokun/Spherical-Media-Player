@@ -45,6 +45,8 @@ namespace yutokun.SphericalMediaPlayer
                 videoTexture.Create();
                 videoMaterial.SetTexture(MainTex, videoTexture);
 
+                Application.targetFrameRate = (int)videoPlayer.frameRate;
+
                 videoPlayer.Play();
             });
         }
