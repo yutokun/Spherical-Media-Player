@@ -25,7 +25,7 @@ namespace yutokun.SphericalMediaPlayer
             while (camera.rotation != Quaternion.identity)
             {
                 ++loopCount;
-                camera.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, 1f / 60f * loopCount);
+                camera.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, 1f / 30f * loopCount);
                 yield return null;
             }
         }
