@@ -1,5 +1,7 @@
 # Spherical Media Player
 
+![](./Docs/Screenshot.png)
+
 Spherical Video / Photo Player for macOS.  
 VLC and GoPro Player support spherical media, but they rely on specific metadata. This program can play these media as
 spherical without needing it.
@@ -45,3 +47,7 @@ Copyright (c) 2018 Patrick McCarthy
 
 MIT License  
 Copyright (c) 2024 Cysharp, Inc.
+
+### Movie in the screenshot above
+
+https://www.mettle.com/360vr-master-series-free-360-downloads-page/
