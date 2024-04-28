@@ -2870,6 +2870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recenterButton: {fileID: 1920947214}
   camera: {fileID: 939039609}
+  recenterDuration: 0.5
 --- !u!1 &1968662635
 GameObject:
   m_ObjectHideFlags: 0

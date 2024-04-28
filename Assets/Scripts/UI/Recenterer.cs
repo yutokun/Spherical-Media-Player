@@ -12,6 +12,9 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         Transform camera;
 
+        [SerializeField]
+        float recenterDuration = 1f;
+
         void Awake()
         {
             recenterButton.onClick.AddListener(() => StartCoroutine(Recenter()));
@@ -20,12 +23,12 @@ namespace yutokun.SphericalMediaPlayer
         IEnumerator Recenter()
         {
             var startRotation = camera.rotation;
-            var loopCount = 0;
+            var elapsedTime = 0f;
 
             while (camera.rotation != Quaternion.identity)
             {
-                ++loopCount;
-                camera.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, 1f / 30f * loopCount);
+                elapsedTime += Time.deltaTime;
+                camera.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, Mathf.Clamp01(elapsedTime / recenterDuration));
                 yield return null;
             }
         }
