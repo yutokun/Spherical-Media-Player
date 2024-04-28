@@ -14,6 +14,7 @@ namespace yutokun.SphericalMediaPlayer
 
         static readonly int ImageType = Shader.PropertyToID("_ImageType");
         static readonly int Layout = Shader.PropertyToID("_Layout");
+        static readonly int Rotation = Shader.PropertyToID("_Rotation");
 
         void Awake()
         {
@@ -35,6 +36,7 @@ namespace yutokun.SphericalMediaPlayer
 
             SetDegree(mode);
             SetStereo(mode);
+            SetRotation(mode);
         }
 
         void SetDegree(ProjectionMode mode)
@@ -67,6 +69,22 @@ namespace yutokun.SphericalMediaPlayer
             };
 
             videoMaterial.SetFloat(Layout, layout);
+        }
+
+        void SetRotation(ProjectionMode mode)
+        {
+            var rotation = mode switch
+            {
+                ProjectionMode.Mono360 => 90,
+                ProjectionMode.TB360 => 90,
+                ProjectionMode.SBS360 => 90,
+                ProjectionMode.Mono180 => 0,
+                ProjectionMode.TB180 => 0,
+                ProjectionMode.SBS180 => 0,
+                _ => throw new ArgumentOutOfRangeException(nameof(mode), mode, null),
+            };
+
+            videoMaterial.SetFloat(Rotation, rotation);
         }
     }
 }
