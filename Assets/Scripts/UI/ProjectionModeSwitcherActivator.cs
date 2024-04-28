@@ -1,4 +1,7 @@
+using R3;
+using R3.Triggers;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace yutokun.SphericalMediaPlayer
@@ -14,10 +17,20 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         CanvasGroup canvas;
 
+        [SerializeField]
+        UIBehaviour[] hideTriggers;
+
         static readonly int Hidden = Animator.StringToHash("Hidden");
 
         void Awake()
         {
+            foreach (var hideTrigger in hideTriggers)
+            {
+                hideTrigger.OnPointerDownAsObservable()
+                           .Subscribe(_ => Hide())
+                           .AddTo(this);
+            }
+
             button.onClick.AddListener(() => Toggle());
             Hide();
         }

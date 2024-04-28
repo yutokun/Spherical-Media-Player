@@ -2252,6 +2252,16 @@ MonoBehaviour:
   button: {fileID: 284090658}
   animator: {fileID: 1501235374}
   canvas: {fileID: 1501235375}
+  hideTriggers:
+  - {fileID: 2063449631}
+  - {fileID: 1291016136}
+  - {fileID: 1845109162}
+  - {fileID: 1920947215}
+  - {fileID: 1495389145}
+  - {fileID: 1306835598}
+  - {fileID: 102375293}
+  - {fileID: 364207995}
+  - {fileID: 1293495675}
 --- !u!1 &1765257552
 GameObject:
   m_ObjectHideFlags: 0
