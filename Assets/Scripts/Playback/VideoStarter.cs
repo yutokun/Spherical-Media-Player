@@ -45,10 +45,20 @@ namespace yutokun.SphericalMediaPlayer
                 videoTexture.Create();
                 videoMaterial.SetTexture(MainTex, videoTexture);
 
-                Application.targetFrameRate = (int)videoPlayer.frameRate;
+                SetBetterFramerate(videoPlayer.frameRate);
 
                 videoPlayer.Play();
             });
+        }
+
+        void SetBetterFramerate(float framerate)
+        {
+            Application.targetFrameRate = framerate switch
+            {
+                25 => 50,
+                30 => 60,
+                _ => (int)framerate,
+            };
         }
 
         void OnApplicationQuit()
