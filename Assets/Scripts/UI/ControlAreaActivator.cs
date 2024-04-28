@@ -18,10 +18,11 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         Animator animator;
 
+        bool dragging;
+
         Vector3 prevMousePosition;
         float mouseStopTime;
 
-        float mouseStopTimeAfterClick;
         bool mouseWasClicked;
 
         static readonly int Hidden = Animator.StringToHash("Hidden");
@@ -31,18 +32,22 @@ namespace yutokun.SphericalMediaPlayer
 
         void Awake()
         {
-            background.OnPointerClickAsObservable()
+            background.OnPointerDownAsObservable()
                       .Subscribe(_ => StartCoroutine(DetectClick()))
                       .AddTo(this);
         }
 
         IEnumerator DetectClick()
         {
+            dragging = true;
+
             var mousePositionOnButtonDown = Input.mousePosition;
             yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
             mouseWasClicked = mousePositionOnButtonDown == Input.mousePosition;
             yield return null;
             mouseWasClicked = false;
+
+            dragging = false;
         }
 
         void Update()
@@ -71,7 +76,7 @@ namespace yutokun.SphericalMediaPlayer
         void ApplyActiveness()
         {
             var mouseIsMoving = mouseStopTime == 0f;
-            if (mouseIsMoving)
+            if (mouseIsMoving && !dragging)
             {
                 Show();
             }
