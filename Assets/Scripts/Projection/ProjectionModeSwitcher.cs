@@ -7,32 +7,20 @@ namespace yutokun.SphericalMediaPlayer
     public class ProjectionModeSwitcher : MonoBehaviour
     {
         [SerializeField]
-        Button button;
-
-        [SerializeField]
         Material videoMaterial;
 
         [SerializeField]
         Text text;
-
-        ProjectionMode mode;
 
         static readonly int ImageType = Shader.PropertyToID("_ImageType");
         static readonly int Layout = Shader.PropertyToID("_Layout");
 
         void Awake()
         {
-            SwitchTo(mode);
-            button.onClick.AddListener(OnButtonClick);
+            SwitchTo(ProjectionMode.Mono360); // TODO 何か良い自動判定ができれば入れる
         }
 
-        void OnButtonClick()
-        {
-            mode = (ProjectionMode)Mathf.Repeat(((int)mode) + 1, Enum.GetValues(typeof(ProjectionMode)).Length);
-            SwitchTo(mode);
-        }
-
-        void SwitchTo(ProjectionMode mode)
+        public void SwitchTo(ProjectionMode mode)
         {
             text.text = mode switch
             {
