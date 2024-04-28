@@ -17,7 +17,7 @@ namespace yutokun.SphericalMediaPlayer
         readonly ExtensionFilter[] extensionsFilter =
         {
             new("Movie Files", "mp4", "mov", "m4v"),
-            new("Photo Files", "png", "jpg", "jpeg"),
+            // new("Photo Files", "png", "jpg", "jpeg"), // TODO
         };
 
         void Start()
