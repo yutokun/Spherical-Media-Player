@@ -44,7 +44,7 @@ namespace yutokun.SphericalMediaPlayer
             fill.StopUpdateUntilSeekingFinished();
 
             var center = transform.position.x;
-            var width = seekBar.rectTransform.rect.width * (Screen.dpi / 72f); // dpi の違いを補正
+            var width = seekBar.rectTransform.rect.width * RetinaHelper.DPIScale;
             var leftMargin = center - width / 2f;
 
             var normalizedTime = 0f;
