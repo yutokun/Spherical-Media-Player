@@ -9,12 +9,11 @@ Made with Unity.
 
 ## Features / Roadmap
 
-- [x] 360 Mono/Stereoscopic Video Playback
-- [x] 180 Mono/Stereoscopic Video Playback
-- [ ] 360 Mono/Stereoscopic Photo Viewing
-- [ ] 180 Mono/Stereoscopic Photo Viewing
+- [x] 360/180, Mono/Stereoscopic Video Playback
+- [ ] 360/180, Mono/Stereoscopic Photo Viewing
 - [x] Recentering
 - [ ] Info Overlay
+- [x] Remembering Projection Mode for files
 - [x] QuickTime Style UI
 - [ ] Keyboard Controls
     - [x] Space - Play/Pause
