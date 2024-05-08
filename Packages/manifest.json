@@ -3,6 +3,8 @@
     "com.cysharp.r3": "https://github.com/Cysharp/R3.git?path=src/R3.Unity/Assets/R3.Unity",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.github-glitchenzo.nugetforunity": "4.1.0",
+    "com.stbsharp.stbimagesharp": "https://github.com/mochi-neko/StbImageSharpForUnity.git?path=/Assets/StbImageSharp",
+    "com.mochineko.stbimagesharp-for-unity": "https://github.com/mochi-neko/StbImageSharpForUnity.git?path=/Assets/Mochineko/StbImageSharpForUnity",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ugui": "1.0.0",

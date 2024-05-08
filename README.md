@@ -46,6 +46,11 @@ Copyright (c) 2018 Patrick McCarthy
 MIT License  
 Copyright (c) 2024 Cysharp, Inc.
 
+### [StbImageSharpForUnity](https://github.com/mochi-neko/StbImageSharpForUnity)
+
+MIT License  
+Copyright (c) 2022 mochineko
+
 ### Movie in the screenshot above
 
 https://www.mettle.com/360vr-master-series-free-360-downloads-page/
