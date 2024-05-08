@@ -14,12 +14,6 @@ namespace yutokun.SphericalMediaPlayer
         public Observable<string> OnOpenedAsObservable => onOpened.AsObservable();
         readonly Subject<string> onOpened = new();
 
-        readonly ExtensionFilter[] extensionsFilter =
-        {
-            new("Movies", "mp4", "mov", "m4v"),
-            // new("Photos", "png", "jpg", "jpeg"), // TODO
-        };
-
         void Start()
         {
             openButton.onClick.AddListener(ShowOpenDialog);
@@ -28,7 +22,7 @@ namespace yutokun.SphericalMediaPlayer
 
         void ShowOpenDialog()
         {
-            var paths = StandaloneFileBrowser.OpenFilePanel("Open Movie...", Settings.LastPath, extensionsFilter, false);
+            var paths = StandaloneFileBrowser.OpenFilePanel("Open Media...", Settings.LastPath, FileExtension.Filters, false);
             var path = paths[0];
             if (string.IsNullOrEmpty(path)) return;
 

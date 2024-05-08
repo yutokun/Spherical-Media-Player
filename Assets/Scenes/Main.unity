@@ -366,6 +366,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250638447}
+  - component: {fileID: 250638452}
+  - component: {fileID: 250638451}
   - component: {fileID: 250638448}
   - component: {fileID: 250638449}
   - component: {fileID: 250638450}
@@ -436,8 +438,37 @@ MonoBehaviour:
   - {fileID: 1765257557}
   - {fileID: 1421414286}
   - {fileID: 627794057}
-  fileOpener: {fileID: 1172131663}
+  fileOpener: {fileID: 250638452}
   videoPlayer: {fileID: 1172131661}
+--- !u!114 &250638451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250638445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6082fdff85c448284a2d263f47dc20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileOpener: {fileID: 250638452}
+  videoPlayer: {fileID: 1172131661}
+  mediaMaterial: {fileID: 2100000, guid: 1b54b6b85902a49c19c58828fc35447a, type: 2}
+  videoTexture: {fileID: 8400000, guid: 15dbc5a356d69443e96af39f23d650bb, type: 2}
+--- !u!114 &250638452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250638445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922bc092019834463a2d7aee3a511f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openButton: {fileID: 1291016135}
 --- !u!1 &284090656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,8 +1290,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1172131662}
   - component: {fileID: 1172131661}
-  - component: {fileID: 1172131663}
-  - component: {fileID: 1172131664}
   - component: {fileID: 1172131665}
   m_Layer: 0
   m_Name: Video Player
@@ -1320,35 +1349,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1172131663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172131660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922bc092019834463a2d7aee3a511f5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openButton: {fileID: 1291016135}
---- !u!114 &1172131664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172131660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd6082fdff85c448284a2d263f47dc20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileOpener: {fileID: 1172131663}
-  videoPlayer: {fileID: 1172131661}
-  videoMaterial: {fileID: 2100000, guid: 1b54b6b85902a49c19c58828fc35447a, type: 2}
-  videoTexture: {fileID: 8400000, guid: 15dbc5a356d69443e96af39f23d650bb, type: 2}
 --- !u!114 &1172131665
 MonoBehaviour:
   m_ObjectHideFlags: 0
