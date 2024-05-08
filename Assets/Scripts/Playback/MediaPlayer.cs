@@ -78,6 +78,7 @@ namespace yutokun.SphericalMediaPlayer
         void StopVideo()
         {
             videoPlayer.Stop();
+            videoPlayer.url = null;
         }
 
         async UniTaskVoid ShowPhotoAsync(string path)
