@@ -367,8 +367,10 @@ GameObject:
   m_Component:
   - component: {fileID: 250638447}
   - component: {fileID: 250638448}
+  - component: {fileID: 250638449}
+  - component: {fileID: 250638450}
   m_Layer: 0
-  m_Name: ResolutionAdjuster
+  m_Name: Systems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,6 +403,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59cc1edccd56f4cc79b0dc438a715754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &250638449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250638445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33212a0260522487e9491d1d7a412fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &250638450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250638445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b692f65721019424f80b33f10e37a312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectionModeDatabase: {fileID: 250638449}
+  switcher: {fileID: 284090661}
+  specifiers:
+  - {fileID: 1446661359}
+  - {fileID: 45437137}
+  - {fileID: 1968662640}
+  - {fileID: 1765257557}
+  - {fileID: 1421414286}
+  - {fileID: 627794057}
+  fileOpener: {fileID: 1172131663}
+  videoPlayer: {fileID: 1172131661}
 --- !u!1 &284090656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,8 +3128,8 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 250638447}
   - {fileID: 939039609}
   - {fileID: 1172131662}
   - {fileID: 891205841}
   - {fileID: 981343451}
-  - {fileID: 250638447}
