@@ -11,6 +11,9 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         Animator animator;
 
+        [SerializeField]
+        CanvasGroup canvas;
+
         static readonly int Hidden = Animator.StringToHash("Hidden");
 
         void Awake()
@@ -37,11 +40,15 @@ namespace yutokun.SphericalMediaPlayer
         void Show()
         {
             animator.SetBool(Hidden, false);
+            canvas.interactable = true;
+            canvas.blocksRaycasts = true;
         }
 
         void Hide()
         {
             animator.SetBool(Hidden, true);
+            canvas.interactable = false;
+            canvas.blocksRaycasts = false;
         }
     }
 }
