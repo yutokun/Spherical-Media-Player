@@ -17,7 +17,7 @@ namespace yutokun.SphericalMediaPlayer
         void Awake()
         {
             fileOpener.OnOpenedAsObservable
-                      .Subscribe(path => SwitchUI(path.IsMoviePath()))
+                      .Subscribe(path => SwitchUI(path.IsVideoPath()))
                       .AddTo(this);
         }
 

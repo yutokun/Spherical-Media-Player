@@ -34,7 +34,7 @@ namespace yutokun.SphericalMediaPlayer
 
         void OnOpen(string path)
         {
-            if (path.IsMoviePath())
+            if (path.IsVideoPath())
             {
                 StopVideo();
                 PlayVideoAsync(path).Forget();
