@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileOpener: {fileID: 250638452}
-  mediaMaterial: {fileID: 2100000, guid: 1b54b6b85902a49c19c58828fc35447a, type: 2}
+  mediaPlayer: {fileID: 250638451}
 --- !u!1 &1495389143
 GameObject:
   m_ObjectHideFlags: 0

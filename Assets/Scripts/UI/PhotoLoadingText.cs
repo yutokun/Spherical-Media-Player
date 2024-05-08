@@ -10,9 +10,7 @@ namespace yutokun.SphericalMediaPlayer
         FileOpener fileOpener;
 
         [SerializeField]
-        Material mediaMaterial;
-
-        static readonly int MainTex = Shader.PropertyToID("_MainTex");
+        MediaPlayer mediaPlayer;
 
         void Awake()
         {
@@ -35,8 +33,7 @@ namespace yutokun.SphericalMediaPlayer
         {
             gameObject.SetActive(true);
 
-            var prevTexture = mediaMaterial.GetTexture(MainTex);
-            await UniTask.WaitUntil(() => mediaMaterial.GetTexture(MainTex) != prevTexture);
+            await UniTask.WaitWhile(() => mediaPlayer.IsLoading);
 
             gameObject.SetActive(false);
         }
