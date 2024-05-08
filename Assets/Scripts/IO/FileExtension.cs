@@ -6,25 +6,26 @@ namespace yutokun.SphericalMediaPlayer
 {
     public static class FileExtension
     {
-        static readonly ExtensionFilter Movie = new("Movies", "mp4", "mov", "m4v");
-        static readonly ExtensionFilter Photo = new("Photos", "png", "jpg", "jpeg");
+        static readonly string[] Movie = { "mp4", "mov", "m4v" };
+        static readonly string[] Photo = { "png", "jpg", "jpeg" };
+
+        static string[] Media => Movie.Concat(Photo).ToArray();
 
         public static readonly ExtensionFilter[] Filters =
         {
-            Movie,
-            Photo,
+            new("Media", Media),
         };
 
         public static bool IsMoviePath(this string path)
         {
             var extension = Path.GetExtension(path).TrimStart('.');
-            return Movie.Extensions.Contains(extension);
+            return Movie.Contains(extension);
         }
 
         public static bool IsPhotoPath(this string path)
         {
             var extension = Path.GetExtension(path).TrimStart('.');
-            return Photo.Extensions.Contains(extension);
+            return Photo.Contains(extension);
         }
     }
 }
