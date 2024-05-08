@@ -7,12 +7,16 @@ Other common players also support spherical media, but they rely on specific met
 
 Made with Unity.
 
+## Download
+
+Please download latest version from [Releases](https://github.com/yutokun/Spherical-Media-Player/releases).
+
 ## Features / Roadmap
 
 - [x] 360/180, Mono/Stereoscopic Video Playback
 - [x] 360/180, Mono/Stereoscopic Photo Viewing
 - [x] Recentering
-- [ ] Info Overlay
+- [x] Info Overlay
 - [x] Remembering Projection Mode for files
 - [x] QuickTime Style UI
 - [ ] Keyboard Controls
