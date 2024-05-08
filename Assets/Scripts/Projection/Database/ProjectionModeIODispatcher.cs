@@ -1,7 +1,6 @@
 using System.Linq;
 using R3;
 using UnityEngine;
-using UnityEngine.Video;
 
 namespace yutokun.SphericalMediaPlayer
 {
@@ -20,7 +19,7 @@ namespace yutokun.SphericalMediaPlayer
         FileOpener fileOpener;
 
         [SerializeField]
-        VideoPlayer videoPlayer;
+        MediaPlayer mediaPlayer;
 
         void Awake()
         {
@@ -47,7 +46,7 @@ namespace yutokun.SphericalMediaPlayer
 
         void OnProjectionModeSpecified(ProjectionMode mode)
         {
-            projectionModeDatabase.AddOrReplace(videoPlayer.url, mode);
+            projectionModeDatabase.AddOrReplace(mediaPlayer.Path, mode);
         }
     }
 }

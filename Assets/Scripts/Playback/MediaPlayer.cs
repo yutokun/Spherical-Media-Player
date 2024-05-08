@@ -24,6 +24,8 @@ namespace yutokun.SphericalMediaPlayer
         Texture blackTexture;
         static readonly int MainTex = Shader.PropertyToID("_MainTex");
 
+        public string Path { get; private set; }
+
         void Awake()
         {
             blackTexture = mediaMaterial.GetTexture(MainTex);
@@ -36,11 +38,13 @@ namespace yutokun.SphericalMediaPlayer
         {
             if (path.IsVideoPath())
             {
+                Path = path;
                 StopVideo();
                 PlayVideoAsync(path).Forget();
             }
             else if (path.IsPhotoPath())
             {
+                Path = path;
                 StopVideo();
                 ShowPhotoAsync(path).Forget();
             }

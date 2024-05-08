@@ -439,7 +439,7 @@ MonoBehaviour:
   - {fileID: 1421414286}
   - {fileID: 627794057}
   fileOpener: {fileID: 250638452}
-  videoPlayer: {fileID: 1172131661}
+  mediaPlayer: {fileID: 250638451}
 --- !u!114 &250638451
 MonoBehaviour:
   m_ObjectHideFlags: 0
