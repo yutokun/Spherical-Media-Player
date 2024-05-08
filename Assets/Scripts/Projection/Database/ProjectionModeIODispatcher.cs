@@ -1,3 +1,4 @@
+using System.Linq;
 using R3;
 using UnityEngine;
 using UnityEngine.Video;
@@ -39,6 +40,9 @@ namespace yutokun.SphericalMediaPlayer
         {
             var mode = projectionModeDatabase.Get(path);
             switcher.SwitchTo(mode);
+
+            var specifier = specifiers.First(s => s.Mode == mode);
+            specifier.MoveCheckmarkHere();
         }
 
         void OnProjectionModeSpecified(ProjectionMode mode)

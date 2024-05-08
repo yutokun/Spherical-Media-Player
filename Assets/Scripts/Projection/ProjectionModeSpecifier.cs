@@ -19,6 +19,8 @@ namespace yutokun.SphericalMediaPlayer
         [SerializeField]
         ProjectionMode mode;
 
+        public ProjectionMode Mode => mode;
+
         public Observable<ProjectionMode> OnProjectionModeSpecifiedAsObservable => onProjectionModeSpecified;
         readonly Subject<ProjectionMode> onProjectionModeSpecified = new();
 
@@ -30,11 +32,16 @@ namespace yutokun.SphericalMediaPlayer
                       switcher.SwitchTo(mode);
                       onProjectionModeSpecified.OnNext(mode);
 
-                      var pos = checkmark.anchoredPosition;
-                      pos.y = GetComponent<RectTransform>().anchoredPosition.y;
-                      checkmark.anchoredPosition = pos;
+                      MoveCheckmarkHere();
                   })
                   .AddTo(this);
+        }
+
+        public void MoveCheckmarkHere()
+        {
+            var pos = checkmark.anchoredPosition;
+            pos.y = GetComponent<RectTransform>().anchoredPosition.y;
+            checkmark.anchoredPosition = pos;
         }
     }
 }
