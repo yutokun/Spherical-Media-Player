@@ -1,4 +1,5 @@
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using R3;
 using UnityEngine;
 
@@ -37,11 +38,19 @@ namespace yutokun.SphericalMediaPlayer
 
         void OnOpenFile(string path)
         {
-            var mode = projectionModeDatabase.Get(path);
-            switcher.SwitchTo(mode);
+            UniTask.Void(async () =>
+            {
+                if (path.IsPhotoPath())
+                {
+                    await UniTask.WaitWhile(() => mediaPlayer.IsLoading);
+                }
 
-            var specifier = specifiers.First(s => s.Mode == mode);
-            specifier.MoveCheckmarkHere();
+                var mode = projectionModeDatabase.Get(path);
+                switcher.SwitchTo(mode);
+
+                var specifier = specifiers.First(s => s.Mode == mode);
+                specifier.MoveCheckmarkHere();
+            });
         }
 
         void OnProjectionModeSpecified(ProjectionMode mode)

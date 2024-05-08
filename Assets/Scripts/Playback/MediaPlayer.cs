@@ -25,6 +25,7 @@ namespace yutokun.SphericalMediaPlayer
         static readonly int MainTex = Shader.PropertyToID("_MainTex");
 
         public string Path { get; private set; }
+        public bool IsLoading { get; private set; }
 
         void Awake()
         {
@@ -52,6 +53,8 @@ namespace yutokun.SphericalMediaPlayer
 
         async UniTaskVoid PlayVideoAsync(string path)
         {
+            IsLoading = true;
+
             videoPlayer.url = path;
             videoPlayer.Prepare();
             await UniTask.WaitUntil(() => videoPlayer.isPrepared);
@@ -65,6 +68,8 @@ namespace yutokun.SphericalMediaPlayer
             SetBetterFramerate(videoPlayer.frameRate);
 
             videoPlayer.Play();
+
+            IsLoading = false;
 
             return;
 
@@ -87,6 +92,8 @@ namespace yutokun.SphericalMediaPlayer
 
         async UniTaskVoid ShowPhotoAsync(string path)
         {
+            IsLoading = true;
+
             var data = await File.ReadAllBytesAsync(path);
 
             await UniTask.SwitchToThreadPool();
@@ -95,6 +102,8 @@ namespace yutokun.SphericalMediaPlayer
 
             var tex2d = result.ToTexture2D();
             mediaMaterial.SetTexture(MainTex, tex2d);
+
+            IsLoading = false;
         }
 
 
