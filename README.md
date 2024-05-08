@@ -10,7 +10,7 @@ Made with Unity.
 ## Features / Roadmap
 
 - [x] 360/180, Mono/Stereoscopic Video Playback
-- [ ] 360/180, Mono/Stereoscopic Photo Viewing
+- [x] 360/180, Mono/Stereoscopic Photo Viewing
 - [x] Recentering
 - [ ] Info Overlay
 - [x] Remembering Projection Mode for files
