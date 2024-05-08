@@ -19,10 +19,12 @@ namespace yutokun.SphericalMediaPlayer
         void Load()
         {
             var json = File.ReadAllText(DatabasePath);
-            var pairsClasses = JsonUtility.FromJson<ProjectionPair[]>(json);
+            var jsonClass = JsonUtility.FromJson<ProjectionPairJson>(json);
+
+            if (jsonClass.Pairs is null) return;
 
             pairs.Clear();
-            foreach (var pair in pairsClasses)
+            foreach (var pair in jsonClass.Pairs)
             {
                 pairs.Add(pair.Path, pair.Mode);
             }
@@ -30,14 +32,15 @@ namespace yutokun.SphericalMediaPlayer
 
         void Save()
         {
-            var pairsClasses = pairs.Select(p => new ProjectionPair { Path = p.Key, Mode = p.Value });
-            var json = JsonUtility.ToJson(pairsClasses);
+            var jsonClass = new ProjectionPairJson();
+            jsonClass.Pairs = pairs.Select(p => new ProjectionPair { Path = p.Key, Mode = p.Value }).ToArray();
+            var json = JsonUtility.ToJson(jsonClass);
             File.WriteAllText(DatabasePath, json);
+            Debug.Log(json);
         }
 
         public ProjectionMode Get(string path)
         {
-            Debug.Log($"読込： {path} -> {pairs.GetValueOrDefault(path, ProjectionMode.Mono360)}");
             return pairs.GetValueOrDefault(path, ProjectionMode.Mono360);
         }
 
@@ -51,8 +54,6 @@ namespace yutokun.SphericalMediaPlayer
             pairs.Add(path, mode);
 
             Save();
-
-            Debug.Log($"保存： {path} -> {mode}");
         }
     }
 }
