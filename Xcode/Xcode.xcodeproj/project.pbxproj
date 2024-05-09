@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		A817464BA2D1AA9BC4245428 /* StandaloneFileBrowser.bundle in CopyPlugIns */ = {isa = PBXBuildFile; fileRef = 55EF4CBAA442A707A98512CB /* StandaloneFileBrowser.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C4134434BAA4B1124ED384E4 /* MonoBleedingEdge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 813A4A57BCC549787A39ED23 /* MonoBleedingEdge */; };
 		CDD5792C240E027400DEA632 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = CDD5792B240E027400DEA632 /* MainMenu.nib */; };
+		D1575B792BECFEC500F778F1 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D1575B782BECFEC500F778F1 /* Sparkle */; };
 		E8CD43E99D2051E274A8E6F0 /* libmono-native.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0E04E6C9D9634948F251805 /* libmono-native.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0CB49BE9280A5F98EBBFD95 /* libmonobdwgc-2.0.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E574F49B92019029722B67E /* libmonobdwgc-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750575B4214B38CE004B1B34 /* UnityPlayer.dylib in Frameworks */,
+				D1575B792BECFEC500F778F1 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +190,9 @@
 			dependencies = (
 			);
 			name = "Spherical Media Player";
+			packageProductDependencies = (
+				D1575B782BECFEC500F778F1 /* Sparkle */,
+			);
 			productName = "Spherical Media Player";
 			productReference = 752CA8282149E6C100295EFC /* Spherical Media Player.app */;
 			productType = "com.apple.product-type.application";
@@ -207,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Unity-iPhone" */;
+			buildConfigurationList = 752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Xcode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,7 +221,10 @@
 				Base,
 			);
 			mainGroup = 752CA81F2149E6C100295EFC;
-			productRefGroup = 752CA8292149E6C100295EFC;
+			packageReferences = (
+				D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			productRefGroup = 752CA8292149E6C100295EFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -394,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+		752CA8232149E6C100295EFC /* Build configuration list for PBXProject "Xcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752CA8402149E6C400295EFC /* Debug */,
@@ -413,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1575B782BECFEC500F778F1 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 752CA8202149E6C100295EFC /* Project object */;
 }
