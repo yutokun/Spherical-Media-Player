@@ -41,6 +41,8 @@
 	<string>PlayerApplication</string>
 	<key>SUPublicEDKey</key>
 	<string>x7K9YFgplRnuGJMQFOhvm3EtlXpgzohuwDe0ao8d52A=</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/yutokun/Spherical-Media-Player/main/appcast.xml</string>
 	<key>UnityBuildNumber</key>
 	<string>530ae0ba3889</string>
 </dict>
