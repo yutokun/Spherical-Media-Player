@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="101300" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22689"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PlayerApplication">
@@ -17,6 +17,12 @@
                 <menuItem title="NewApplication" id="349">
                     <menu key="submenu" title="NewApplication" systemMenu="apple" id="350">
                         <items>
+                            <menuItem title="Check for Updates..." id="owT-v8-AST">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkForUpdates:" target="zBr-KO-xgB" id="duh-Ki-8ty"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Services" id="352">
                                 <menu key="submenu" title="Services" systemMenu="services" id="353"/>
                             </menuItem>
@@ -84,5 +90,6 @@
                 <outlet property="m_QuitMenuItem" destination="355" id="385"/>
             </connections>
         </customObject>
+        <customObject id="zBr-KO-xgB" customClass="SPUStandardUpdaterController"/>
     </objects>
 </document>
