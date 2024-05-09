@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 250638448}
   - component: {fileID: 250638449}
   - component: {fileID: 250638450}
+  - component: {fileID: 250638453}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -469,6 +470,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openButton: {fileID: 1291016135}
+--- !u!114 &250638453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250638445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4598d33cf2e4af9888077c345511c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileOpener: {fileID: 250638452}
+  mediaPlayer: {fileID: 250638451}
 --- !u!1 &284090656
 GameObject:
   m_ObjectHideFlags: 0
