@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B6A42378072A681D088B7C7 /* libMonoPosixHelper.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67CA40D59BCE57CE412D87C1 /* libMonoPosixHelper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24954D3BA13FC9729F53A399 /* libmonobdwgc-2.0.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0441F5AC7C5DFE9916568A /* libmonobdwgc-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37C04530A9417D8EC42AD088 /* libmono-native.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CEE8CD74DE3DFB6592B /* libmono-native.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A214B29885BCD402C036973 /* StandaloneFileBrowser.bundle in CopyPlugIns */ = {isa = PBXBuildFile; fileRef = A6304B279052075B82507B14 /* StandaloneFileBrowser.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		750575B4214B38CE004B1B34 /* UnityPlayer.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750575B3214B38CE004B1B34 /* UnityPlayer.dylib */; };
 		750575B5214B3DF2004B1B34 /* UnityPlayer.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 750575B3214B38CE004B1B34 /* UnityPlayer.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		752CA83E2149E6C400295EFC /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 752CA83D2149E6C400295EFC /* Main.cpp */; };
@@ -15,35 +17,33 @@
 		75E7179121715210002B2479 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75E7178E21715210002B2479 /* DefaultPreferences.plist */; };
 		75E7179221715210002B2479 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 75E7178F21715210002B2479 /* Data */; };
 		75E7179321715210002B2479 /* PlayerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 75E7179021715210002B2479 /* PlayerIcon.icns */; };
-		A817464BA2D1AA9BC4245428 /* StandaloneFileBrowser.bundle in CopyPlugIns */ = {isa = PBXBuildFile; fileRef = 55EF4CBAA442A707A98512CB /* StandaloneFileBrowser.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		C4134434BAA4B1124ED384E4 /* MonoBleedingEdge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 813A4A57BCC549787A39ED23 /* MonoBleedingEdge */; };
+		7C7A419EB4A9391703DC54B3 /* libMonoPosixHelper.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6EF44A390AE283730D37F61 /* libMonoPosixHelper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A00D48F189A305B26A6EC26E /* MonoBleedingEdge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C86427A907A18D0E6149F53 /* MonoBleedingEdge */; };
 		CDD5792C240E027400DEA632 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = CDD5792B240E027400DEA632 /* MainMenu.nib */; };
-		D1575B792BECFEC500F778F1 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D1575B782BECFEC500F778F1 /* Sparkle */; };
-		E8CD43E99D2051E274A8E6F0 /* libmono-native.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0E04E6C9D9634948F251805 /* libmono-native.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F0CB49BE9280A5F98EBBFD95 /* libmonobdwgc-2.0.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E574F49B92019029722B67E /* libmonobdwgc-2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D10EBFCF2BEF10A5006ABEE1 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = D10EBFCE2BEF10A5006ABEE1 /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		406C415F9097426D0E4A5494 /* Embed Frameworks */ = {
+		48F94D779200254D5111A9AB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F0CB49BE9280A5F98EBBFD95 /* libmonobdwgc-2.0.dylib in Embed Frameworks */,
-				2B6A42378072A681D088B7C7 /* libMonoPosixHelper.dylib in Embed Frameworks */,
-				E8CD43E99D2051E274A8E6F0 /* libmono-native.dylib in Embed Frameworks */,
+				24954D3BA13FC9729F53A399 /* libmonobdwgc-2.0.dylib in Embed Frameworks */,
+				7C7A419EB4A9391703DC54B3 /* libMonoPosixHelper.dylib in Embed Frameworks */,
+				37C04530A9417D8EC42AD088 /* libmono-native.dylib in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A6641F29FB5E52199F8CA95 /* CopyPlugIns */ = {
+		5FD54BE3B3AE0CA87B5CE493 /* CopyPlugIns */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A817464BA2D1AA9BC4245428 /* StandaloneFileBrowser.bundle in CopyPlugIns */,
+				5A214B29885BCD402C036973 /* StandaloneFileBrowser.bundle in CopyPlugIns */,
 			);
 			name = CopyPlugIns;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,13 +59,13 @@
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEA148968ADFD8A897755CA1 /* CopyFiles */ = {
+		7C3443CEADBD0F612E194D1B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents;
 			dstSubfolderSpec = 1;
 			files = (
-				C4134434BAA4B1124ED384E4 /* MonoBleedingEdge in CopyFiles */,
+				A00D48F189A305B26A6EC26E /* MonoBleedingEdge in CopyFiles */,
 			);
 			name = CopyFiles;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,9 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		55EF4CBAA442A707A98512CB /* StandaloneFileBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = StandaloneFileBrowser.bundle; path = "Spherical Media Player/PlugIns/StandaloneFileBrowser.bundle"; sourceTree = SOURCE_ROOT; };
-		5E574F49B92019029722B67E /* libmonobdwgc-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmonobdwgc-2.0.dylib"; path = "Spherical Media Player/Frameworks/libmonobdwgc-2.0.dylib"; sourceTree = SOURCE_ROOT; };
-		67CA40D59BCE57CE412D87C1 /* libMonoPosixHelper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMonoPosixHelper.dylib; path = "Spherical Media Player/Frameworks/libMonoPosixHelper.dylib"; sourceTree = SOURCE_ROOT; };
+		0C86427A907A18D0E6149F53 /* MonoBleedingEdge */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MonoBleedingEdge; path = "Spherical Media Player/MonoBleedingEdge"; sourceTree = SOURCE_ROOT; };
+		49A54CEE8CD74DE3DFB6592B /* libmono-native.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmono-native.dylib"; path = "Spherical Media Player/Frameworks/libmono-native.dylib"; sourceTree = SOURCE_ROOT; };
 		750575B3214B38CE004B1B34 /* UnityPlayer.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = UnityPlayer.dylib; path = "Spherical Media Player/Frameworks/UnityPlayer.dylib"; sourceTree = "<group>"; };
 		752CA8282149E6C100295EFC /* Spherical Media Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spherical Media Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752CA83C2149E6C400295EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,9 +83,10 @@
 		75E7178E21715210002B2479 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = "Spherical Media Player/Resources/DefaultPreferences.plist"; sourceTree = "<group>"; };
 		75E7178F21715210002B2479 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = "Spherical Media Player/Resources/Data"; sourceTree = "<group>"; };
 		75E7179021715210002B2479 /* PlayerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = PlayerIcon.icns; path = "Spherical Media Player/Resources/PlayerIcon.icns"; sourceTree = "<group>"; };
-		813A4A57BCC549787A39ED23 /* MonoBleedingEdge */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MonoBleedingEdge; path = "Spherical Media Player/MonoBleedingEdge"; sourceTree = SOURCE_ROOT; };
+		A6304B279052075B82507B14 /* StandaloneFileBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = StandaloneFileBrowser.bundle; path = "Spherical Media Player/PlugIns/StandaloneFileBrowser.bundle"; sourceTree = SOURCE_ROOT; };
 		CDD5792B240E027400DEA632 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = "Spherical Media Player/Resources/MainMenu.nib"; sourceTree = "<group>"; };
-		D0E04E6C9D9634948F251805 /* libmono-native.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmono-native.dylib"; path = "Spherical Media Player/Frameworks/libmono-native.dylib"; sourceTree = SOURCE_ROOT; };
+		D6EF44A390AE283730D37F61 /* libMonoPosixHelper.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMonoPosixHelper.dylib; path = "Spherical Media Player/Frameworks/libMonoPosixHelper.dylib"; sourceTree = SOURCE_ROOT; };
+		EF0441F5AC7C5DFE9916568A /* libmonobdwgc-2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmonobdwgc-2.0.dylib"; path = "Spherical Media Player/Frameworks/libmonobdwgc-2.0.dylib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				750575B4214B38CE004B1B34 /* UnityPlayer.dylib in Frameworks */,
-				D1575B792BECFEC500F778F1 /* Sparkle in Frameworks */,
+				D10EBFCF2BEF10A5006ABEE1 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +133,9 @@
 			children = (
 				752CA83C2149E6C400295EFC /* Info.plist */,
 				752CA83D2149E6C400295EFC /* Main.cpp */,
-				B9874859A80A4AF3D5A4E665 /* PlugIns */,
-				7AA245C1966914DA22FC77C5 /* Frameworks */,
-				813A4A57BCC549787A39ED23 /* MonoBleedingEdge */,
+				E2BB414ABEA062846420FB35 /* PlugIns */,
+				917F40E7BDA9565E354DD4E3 /* Frameworks */,
+				0C86427A907A18D0E6149F53 /* MonoBleedingEdge */,
 			);
 			path = "Spherical Media Player";
 			sourceTree = "<group>";
@@ -152,20 +152,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		7AA245C1966914DA22FC77C5 /* Frameworks */ = {
+		917F40E7BDA9565E354DD4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E574F49B92019029722B67E /* libmonobdwgc-2.0.dylib */,
-				67CA40D59BCE57CE412D87C1 /* libMonoPosixHelper.dylib */,
-				D0E04E6C9D9634948F251805 /* libmono-native.dylib */,
+				EF0441F5AC7C5DFE9916568A /* libmonobdwgc-2.0.dylib */,
+				D6EF44A390AE283730D37F61 /* libMonoPosixHelper.dylib */,
+				49A54CEE8CD74DE3DFB6592B /* libmono-native.dylib */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9874859A80A4AF3D5A4E665 /* PlugIns */ = {
+		E2BB414ABEA062846420FB35 /* PlugIns */ = {
 			isa = PBXGroup;
 			children = (
-				55EF4CBAA442A707A98512CB /* StandaloneFileBrowser.bundle */,
+				A6304B279052075B82507B14 /* StandaloneFileBrowser.bundle */,
 			);
 			path = PlugIns;
 			sourceTree = "<group>";
@@ -181,9 +181,9 @@
 				752CA8252149E6C100295EFC /* Frameworks */,
 				752CA8262149E6C100295EFC /* Resources */,
 				750575B6214B3DF2004B1B34 /* Embed Libraries */,
-				5A6641F29FB5E52199F8CA95 /* CopyPlugIns */,
-				406C415F9097426D0E4A5494 /* Embed Frameworks */,
-				FEA148968ADFD8A897755CA1 /* CopyFiles */,
+				5FD54BE3B3AE0CA87B5CE493 /* CopyPlugIns */,
+				48F94D779200254D5111A9AB /* Embed Frameworks */,
+				7C3443CEADBD0F612E194D1B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -191,7 +191,7 @@
 			);
 			name = "Spherical Media Player";
 			packageProductDependencies = (
-				D1575B782BECFEC500F778F1 /* Sparkle */,
+				D10EBFCE2BEF10A5006ABEE1 /* Sparkle */,
 			);
 			productName = "Spherical Media Player";
 			productReference = 752CA8282149E6C100295EFC /* Spherical Media Player.app */;
@@ -222,7 +222,7 @@
 			);
 			mainGroup = 752CA81F2149E6C100295EFC;
 			packageReferences = (
-				D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				D10EBFCD2BEF10A5006ABEE1 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 752CA8292149E6C100295EFC /* Products */;
 			projectDirPath = "";
@@ -373,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Spherical Media Player/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yutokun.Spherical-Media-Player";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Spherical Media Player/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yutokun.Spherical-Media-Player";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,7 +423,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+		D10EBFCD2BEF10A5006ABEE1 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
@@ -434,9 +434,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D1575B782BECFEC500F778F1 /* Sparkle */ = {
+		D10EBFCE2BEF10A5006ABEE1 /* Sparkle */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D1575B772BECFEC500F778F1 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			package = D10EBFCD2BEF10A5006ABEE1 /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
 		};
 /* End XCSwiftPackageProductDependency section */

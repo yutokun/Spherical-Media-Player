@@ -20,7 +20,7 @@
                             <menuItem title="Check for Updates..." id="owT-v8-AST">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="checkForUpdates:" target="zBr-KO-xgB" id="duh-Ki-8ty"/>
+                                    <action selector="checkForUpdates:" target="zBr-KO-xgB" id="z7N-kr-tEY"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Services" id="352">
