@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Spherical Media Player</title>
+        <item>
+            <title>0.3.0</title>
+            <pubDate>Sat, 11 May 2024 14:57:09 +0900</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>10.13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/yutokun/Spherical-Media-Player/releases/download/v0.3.0/Spherical.Media.Player.zip" length="23328425" type="application/octet-stream" sparkle:edSignature="8NiONmuIVw5qJEy1UgZ5wdpFwAzYedABtDCP6k6wvkE5TWuk0cY+k5lKC91yP0fpA5e7k/jexuZ0+lCtqHNFAg=="/>
+        </item>
+    </channel>
+</rss>
