@@ -19,6 +19,8 @@ Please download latest version from [Releases](https://github.com/yutokun/Spheri
 - [x] Info Overlay
 - [x] Remembering Projection Mode for files
 - [x] QuickTime Style UI
+- [ ] "Open With" support
+- [x] Sparkle Updater
 - [ ] Keyboard Controls
     - [x] Space - Play/Pause
 
