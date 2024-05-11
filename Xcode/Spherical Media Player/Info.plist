@@ -25,7 +25,7 @@
       <string>MacOSX</string>
     </array>
     <key>CFBundleVersion</key>
-    <string>0</string>
+    <string>1</string>
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.games</string>
     <key>LSMinimumSystemVersion</key>
@@ -42,7 +42,7 @@
 	<key>SUPublicEDKey</key>
 	<string>x7K9YFgplRnuGJMQFOhvm3EtlXpgzohuwDe0ao8d52A=</string>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/yutokun/Spherical-Media-Player/main/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/yutokun/Spherical-Media-Player/master/appcast.xml</string>
     <key>UnityBuildNumber</key>
     <string>530ae0ba3889</string>
   </dict>

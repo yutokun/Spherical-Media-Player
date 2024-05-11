@@ -163,7 +163,7 @@ PlayerSettings:
   applicationIdentifier:
     Standalone: com.yutokun.Spherical-Media-Player
   buildNumber:
-    Standalone: 0
+    Standalone: 1
     VisionOS: 0
     iPhone: 0
     tvOS: 0
